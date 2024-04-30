@@ -2,6 +2,10 @@
 extends Area2D
 
 
+signal picup 	# 동전 접촉
+signal hurt		# 장애물 접촉
+
+
 # Variable
 @export var speed = 350
 var velocity = Vector2.ZERO
