@@ -35,3 +35,8 @@ func _process(delta):
 	if velocity.x != 0 :
 		$AnimatedSprite2D.flip_h = ( 0 > velocity.x )
 	
+
+
+# Area2D 간 접촉이 있으면 호출 | Signal
+func _on_area_entered(area):
+	pass # Replace with function body.
