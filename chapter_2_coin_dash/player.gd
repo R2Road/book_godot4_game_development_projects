@@ -26,4 +26,8 @@ func _process(delta):
 		$AnimatedSprite2D.animation = "run"
 	else:
 		$AnimatedSprite2D.animation = "idle"
+		
+	# Direction 설정
+	if velocity.x != 0 :
+		$AnimatedSprite2D.flip_h = 0 > velocity.x
 	
