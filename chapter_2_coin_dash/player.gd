@@ -29,5 +29,5 @@ func _process(delta):
 		
 	# Direction 설정
 	if velocity.x != 0 :
-		$AnimatedSprite2D.flip_h = 0 > velocity.x
+		$AnimatedSprite2D.flip_h = ( 0 > velocity.x )
 	
