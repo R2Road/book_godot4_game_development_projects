@@ -2,7 +2,7 @@
 extends Area2D
 
 
-signal picup 	# 동전 접촉
+signal pickup 	# 동전 접촉
 signal hurt		# 장애물 접촉
 
 
