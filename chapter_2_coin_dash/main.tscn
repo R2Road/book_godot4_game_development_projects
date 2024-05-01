@@ -19,3 +19,5 @@ texture = ExtResource("1_2c43m")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_pay4u")]
+
+[node name="GameTimer" type="Timer" parent="."]
