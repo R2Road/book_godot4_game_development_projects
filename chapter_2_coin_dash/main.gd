@@ -17,7 +17,11 @@ var playing = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	screensize = get_viewport().get_visible_rect().size
+	$Player.screensize = screensize
+	
+	# 게임 시작전에는 Player Node를 보이지 않는다.
+	$Player.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
