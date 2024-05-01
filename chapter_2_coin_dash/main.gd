@@ -44,3 +44,13 @@ func new_game():
 	# Timer 설정
 	$GameTimer.start()
 	
+	#
+	spawn_coins()
+
+
+func spawn_coins():
+	for i in level + 4:
+		var c = coin_scene.instantiate()
+		add_child( c )
+		c.screensize = screensize
+		c.position = Vector2( randi_range( 0, screensize.x ), randi_range( 0, screensize.y ) )
