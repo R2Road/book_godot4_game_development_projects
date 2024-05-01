@@ -22,6 +22,9 @@ func _ready():
 	
 	# 게임 시작전에는 Player Node를 보이지 않는다.
 	$Player.hide()
+	
+	# 게임 시작
+	new_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
