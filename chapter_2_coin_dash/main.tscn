@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0btlqv80t3rc"]
+[gd_scene load_steps=3 format=3 uid="uid://c0btlqv80t3rc"]
 
 [ext_resource type="Texture2D" uid="uid://6ixshqtk2ep1" path="res://assets/grass.png" id="1_2c43m"]
+[ext_resource type="Script" path="res://main.gd" id="1_ujsme"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_ujsme")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
