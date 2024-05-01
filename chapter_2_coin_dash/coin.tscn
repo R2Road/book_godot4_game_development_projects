@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://b32a8mpa6nkb3"]
+[gd_scene load_steps=15 format=3 uid="uid://b32a8mpa6nkb3"]
 
 [ext_resource type="Texture2D" uid="uid://c3segx1848aoo" path="res://assets/coin/coin-frame-1.png" id="1_10iu4"]
+[ext_resource type="Script" path="res://coin.gd" id="1_e3536"]
 [ext_resource type="Texture2D" uid="uid://dp2y4km73uif4" path="res://assets/coin/coin-frame-2.png" id="2_6q4id"]
 [ext_resource type="Texture2D" uid="uid://dpilfoix77l3g" path="res://assets/coin/coin-frame-3.png" id="3_47uux"]
 [ext_resource type="Texture2D" uid="uid://b2fj0eq6pc0un" path="res://assets/coin/coin-frame-4.png" id="4_1x77l"]
@@ -57,6 +58,7 @@ animations = [{
 size = Vector2(34, 34)
 
 [node name="Coin" type="Area2D" groups=["coins"]]
+script = ExtResource("1_e3536")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
