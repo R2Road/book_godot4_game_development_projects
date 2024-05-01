@@ -27,3 +27,19 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+	
+#
+func new_game():
+	# 기본 정보 초기화
+	playing = true
+	level = 1
+	score = 0
+	time_left = playtime
+	
+	# Player 설정
+	$Player.start()
+	$Player.show()
+	
+	#
+	
