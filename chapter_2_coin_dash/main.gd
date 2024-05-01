@@ -41,5 +41,6 @@ func new_game():
 	$Player.start()
 	$Player.show()
 	
-	#
+	# Timer 설정
+	$GameTimer.start()
 	
