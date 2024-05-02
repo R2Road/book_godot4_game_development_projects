@@ -29,7 +29,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if playing and get_tree().get_nodes_in_group( "coins" ).size() == 0 :
+		level += 1
+		time_left += 5
+		spawn_coins()
 	
 	
 #
