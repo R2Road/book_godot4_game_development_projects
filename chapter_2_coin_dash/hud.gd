@@ -11,3 +11,9 @@ func update_score( value ):
 
 func update_time( value ):
 	$MarginContainer/Time.text = str( value )
+
+
+func show_message( text ):
+	$Message.text = text
+	$Message.show()
+	$Timer.start()
