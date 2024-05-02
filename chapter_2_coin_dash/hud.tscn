@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cin1durcns25b"]
+[gd_scene load_steps=4 format=3 uid="uid://cin1durcns25b"]
 
+[ext_resource type="Script" path="res://hud.gd" id="1_67d67"]
 [ext_resource type="FontFile" uid="uid://bh61ehiw3h71h" path="res://assets/Kenney Bold.ttf" id="1_xlihm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_82dgo"]
@@ -7,6 +8,7 @@ font = ExtResource("1_xlihm")
 font_size = 48
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_67d67")
 
 [node name="Message" type="Label" parent="."]
 anchors_preset = 14
