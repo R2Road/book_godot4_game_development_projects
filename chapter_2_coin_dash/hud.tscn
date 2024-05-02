@@ -47,3 +47,5 @@ label_settings = SubResource("LabelSettings_82dgo")
 vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
