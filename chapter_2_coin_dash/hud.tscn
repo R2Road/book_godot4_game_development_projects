@@ -37,3 +37,9 @@ text = "0"
 label_settings = SubResource("LabelSettings_82dgo")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Time" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_82dgo")
+vertical_alignment = 1
