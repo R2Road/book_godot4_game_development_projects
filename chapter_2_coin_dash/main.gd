@@ -62,6 +62,14 @@ func spawn_coins():
 		c.position = Vector2( randi_range( 0, screensize.x ), randi_range( 0, screensize.y ) )
 
 
+func game_over():
+	playing = false
+	$GameTimer.stop()
+	get_tree().call_group( "coins", "queue_free" )
+	$HUD.show_game_over()
+	$Player.die()
+
+
 func _on_game_timer_timeout():
 	time_left -= 1
 	$HUD.update_timer( time_left )
