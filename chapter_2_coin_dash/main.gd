@@ -71,3 +71,7 @@ func _on_game_timer_timeout():
 
 func _on_player_hurt():
 	game_over()
+
+
+func _on_player_pickup():
+	pass # Replace with function body.
