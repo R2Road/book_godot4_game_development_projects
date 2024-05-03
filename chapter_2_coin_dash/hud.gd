@@ -20,3 +20,7 @@ func show_message( text ):
 
 func _on_timer_timeout():
 	$Message.hide()
+
+
+func _on_start_button_pressed():
+	pass # Replace with function body.
