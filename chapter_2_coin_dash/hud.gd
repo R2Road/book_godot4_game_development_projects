@@ -23,4 +23,6 @@ func _on_timer_timeout():
 
 
 func _on_start_button_pressed():
-	pass # Replace with function body.
+	$StartButton.hide()
+	$Message.hide()
+	start_game.emit()
