@@ -70,4 +70,4 @@ func _on_game_timer_timeout():
 
 
 func _on_player_hurt():
-	pass # Replace with function body.
+	game_over()
