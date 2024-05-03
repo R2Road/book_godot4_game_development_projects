@@ -22,9 +22,6 @@ func _ready():
 	
 	# 게임 시작전에는 Player Node를 보이지 않는다.
 	$Player.hide()
-	
-	# 게임 시작
-	new_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -87,4 +84,9 @@ func _on_player_pickup():
 
 
 func _on_hud_start_game():
-	pass # Replace with function body.
+	# 게임 시작
+	new_game()
+	
+	#
+	$HUD.update_score( score )
+	$HUD.update_timer( time_left )
