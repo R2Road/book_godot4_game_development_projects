@@ -8,7 +8,7 @@ func update_score( value ):
 	$MarginContainer/Score.text = str( value )
 
 
-func update_time( value ):
+func update_timer( value ):
 	$MarginContainer/Time.text = str( value )
 
 
