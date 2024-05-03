@@ -67,3 +67,7 @@ func _on_game_timer_timeout():
 	$HUD.update_timer( time_left )
 	if time_left <= 0:
 		game_over()	
+
+
+func _on_player_hurt():
+	pass # Replace with function body.
