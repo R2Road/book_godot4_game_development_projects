@@ -84,3 +84,7 @@ func _on_player_hurt():
 func _on_player_pickup():
 	score += 1
 	$HUD.update_score( score )
+
+
+func _on_hud_start_game():
+	pass # Replace with function body.
