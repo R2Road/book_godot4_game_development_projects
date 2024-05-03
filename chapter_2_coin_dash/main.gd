@@ -60,3 +60,7 @@ func spawn_coins():
 		add_child( c )
 		c.screensize = screensize
 		c.position = Vector2( randi_range( 0, screensize.x ), randi_range( 0, screensize.y ) )
+
+
+func _on_game_timer_timeout():
+	pass # Replace with function body.
