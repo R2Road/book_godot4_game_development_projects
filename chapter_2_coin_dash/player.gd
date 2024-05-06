@@ -19,7 +19,7 @@ func _ready():
 	
 func start():
 	set_process( true )
-	position = velocity * 0.5
+	position = screensize * 0.5
 	$AnimatedSprite2D.animation = "idle"
 	
 	
