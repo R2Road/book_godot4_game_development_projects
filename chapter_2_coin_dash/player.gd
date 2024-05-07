@@ -49,12 +49,12 @@ func _process(delta):
 
 
 # Area2D 간 접촉이 있으면 호출 | Signal
-func _on_area_entered(coin_area):
-	if coin_area.is_in_group( "coins" ) :
-		coin_area.pickup()
+func _on_area_entered( area ):
+	if area.is_in_group( "coins" ) :
+		area.pickup()
 		pickup.emit()
 	
-	if coin_area.is_in_group( "obstacles" ) :
+	if area.is_in_group( "obstacles" ) :
 		hurt.emit()
 		die()
 		
