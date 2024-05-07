@@ -43,3 +43,7 @@ func pickup():
 func _on_timer_timeout():
 	$AnimatedSprite2D.frame = 0
 	$AnimatedSprite2D.play()
+
+
+func _on_area_entered(area):
+	pass # Replace with function body.
