@@ -97,4 +97,7 @@ func _on_hud_start_game():
 
 
 func _on_powerup_timer_timeout():
-	pass # Replace with function body.
+	var p = powerup_scene.instantiate()
+	add_child( p )
+	p.screensize = screensize
+	p.position = Vector2( randi_range( 0, screensize.x ), randi_range( 0, screensize.y ) )
