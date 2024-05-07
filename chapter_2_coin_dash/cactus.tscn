@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eylfs"]
 size = Vector2(26, 44)
 
-[node name="Cactus" type="Area2D"]
+[node name="Cactus" type="Area2D" groups=["obstacles"]]
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
