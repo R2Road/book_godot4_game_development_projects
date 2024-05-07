@@ -23,6 +23,8 @@ stretch_mode = 1
 
 [node name="GameTimer" type="Timer" parent="."]
 
+[node name="PowerupTimer" type="Timer" parent="."]
+
 [node name="HUD" parent="." instance=ExtResource("5_c55vc")]
 
 [node name="CoinSound" type="AudioStreamPlayer" parent="."]
