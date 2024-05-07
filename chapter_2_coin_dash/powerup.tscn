@@ -63,3 +63,5 @@ sprite_frames = SubResource("SpriteFrames_j3s73")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4kq50")
+
+[node name="LifeTime" type="Timer" parent="."]
