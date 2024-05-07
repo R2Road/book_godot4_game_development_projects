@@ -70,3 +70,5 @@ animation = &"default "
 shape = SubResource("RectangleShape2D_4kq50")
 
 [node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
