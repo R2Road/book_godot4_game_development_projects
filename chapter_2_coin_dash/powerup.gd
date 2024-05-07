@@ -38,3 +38,7 @@ func pickup():
 	#  > 현재 프레임이 끝날 때 처리.
 	# 안전하다.
 	queue_free()
+
+
+func _on_life_time_timeout():
+	pass # Replace with function body.
