@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx2mtk1k02aes"]
+[gd_scene load_steps=14 format=3 uid="uid://dx2mtk1k02aes"]
 
+[ext_resource type="Script" path="res://powerup.gd" id="1_456kt"]
 [ext_resource type="Texture2D" uid="uid://bsuj1yiy10d0a" path="res://assets/pow/pow-frame-1.png" id="1_kaxth"]
 [ext_resource type="Texture2D" uid="uid://dmlp27dd6m6xi" path="res://assets/pow/pow-frame-2.png" id="2_c2sy0"]
 [ext_resource type="Texture2D" uid="uid://b70ypuw2afbh" path="res://assets/pow/pow-frame-3.png" id="3_tohwt"]
@@ -53,6 +54,7 @@ animations = [{
 size = Vector2(34, 34)
 
 [node name="Powerup" type="Area2D" groups=["powerups"]]
+script = ExtResource("1_456kt")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
