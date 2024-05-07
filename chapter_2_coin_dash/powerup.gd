@@ -41,4 +41,4 @@ func pickup():
 
 
 func _on_life_time_timeout():
-	pass # Replace with function body.
+	queue_free()
