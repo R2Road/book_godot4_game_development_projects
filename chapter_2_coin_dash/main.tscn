@@ -26,6 +26,7 @@ stretch_mode = 1
 [node name="GameTimer" type="Timer" parent="."]
 
 [node name="PowerupTimer" type="Timer" parent="."]
+one_shot = true
 
 [node name="HUD" parent="." instance=ExtResource("5_c55vc")]
 
