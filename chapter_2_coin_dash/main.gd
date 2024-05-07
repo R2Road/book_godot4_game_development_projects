@@ -31,6 +31,8 @@ func _process(delta):
 		level += 1
 		time_left += 5
 		spawn_coins()
+		$PowerupTimer.wait_time = randf_range( 5, 10 )
+		$PowerupTimer.start()
 	
 	
 #
