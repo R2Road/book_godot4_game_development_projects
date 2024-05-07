@@ -42,3 +42,7 @@ func pickup():
 
 func _on_life_time_timeout():
 	queue_free()
+
+
+func _on_area_entered(area):
+	pass # Replace with function body.
