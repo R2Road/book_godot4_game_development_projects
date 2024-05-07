@@ -49,7 +49,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("11_6h7tx")
 }],
-"loop": true,
+"loop": false,
 "name": &"default ",
 "speed": 12.0
 }]
@@ -65,7 +65,6 @@ metadata/_edit_group_ = true
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_ogbgu")
 animation = &"default "
-autoplay = "default "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4kq50")
