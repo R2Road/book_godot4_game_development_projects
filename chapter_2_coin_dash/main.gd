@@ -83,10 +83,16 @@ func _on_player_hurt():
 	game_over()
 
 
-func _on_player_pickup():
-	score += 1
-	$HUD.update_score( score )
-	$CoinSound.play()
+func _on_player_pickup( type ):
+	match type :
+		"coin":
+			score += 1
+			$HUD.update_score( score )
+			$CoinSound.play()
+		"powerup":
+			time_left += 5
+			$HUD.update_timer( time_left )
+			$PowerupSound.play()
 
 
 func _on_hud_start_game():
