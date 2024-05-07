@@ -68,3 +68,5 @@ animation = &"default "
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4kq50")
+
+[node name="Timer" type="Timer" parent="."]
