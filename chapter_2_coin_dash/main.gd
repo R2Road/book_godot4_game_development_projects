@@ -93,3 +93,7 @@ func _on_hud_start_game():
 	#
 	$HUD.update_score( score )
 	$HUD.update_timer( time_left )
+
+
+func _on_powerup_timer_timeout():
+	pass # Replace with function body.
