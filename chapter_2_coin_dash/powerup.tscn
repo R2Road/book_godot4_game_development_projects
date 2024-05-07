@@ -65,3 +65,6 @@ sprite_frames = SubResource("SpriteFrames_j3s73")
 shape = SubResource("RectangleShape2D_4kq50")
 
 [node name="LifeTime" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
