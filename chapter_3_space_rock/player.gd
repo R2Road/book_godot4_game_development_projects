@@ -44,6 +44,7 @@ func change_state( new_state ):
 			$CollisionShape2D.set_deferred( "disabled", true )
 		DEAD:
 			$CollisionShape2D.set_deferred( "disabled", true )
+	state = new_state
 
 func get_input():
 	thrust = Vector2.ZERO
