@@ -1,6 +1,18 @@
 extends RigidBody2D
 
 #
+# export variable
+#
+@export var engine_power = 500
+@export var spin_power = 800
+
+#
+#
+#
+var thrust = Vector2.ZERO
+var rotation_dir = 0
+
+#
 # enum Name {} 의 형태로 입력해도 된다.
 #
 enum { INIT, ALIVE, INVULNERABLE, DEAD }
