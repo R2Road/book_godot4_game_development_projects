@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqb32pd0pf6i0"]
+[gd_scene load_steps=3 format=3 uid="uid://dqb32pd0pf6i0"]
 
 [ext_resource type="Texture2D" uid="uid://b07avsqptu20f" path="res://assets/laser.png" id="1_xdvji"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gbaxf"]
+radius = 2.0
+height = 26.0
 
 [node name="Area2D" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_xdvji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gbaxf")
