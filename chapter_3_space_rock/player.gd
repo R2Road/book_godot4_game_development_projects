@@ -9,6 +9,11 @@ extends RigidBody2D
 #
 #
 #
+var screensize = Vector2.ZERO
+
+#
+#
+#
 var thrust = Vector2.ZERO
 var rotation_dir = 0
 
@@ -18,10 +23,15 @@ var rotation_dir = 0
 enum { INIT, ALIVE, INVULNERABLE, DEAD }
 var state = INIT
 
+
+
+
 #
 # override
 #
 func _ready():
+	screensize = get_viewport_rect().size
+	
 	change_state( ALIVE )
 
 func _process( delta ):
@@ -30,6 +40,18 @@ func _process( delta ):
 func _physics_process( delta ):
 	constant_force = thrust
 	constant_torque = rotation_dir * spin_power
+
+#
+# RigidBody의 위치나 기타 물리 속성을 직접 변경하는 경우 _integrate_forces 함수를 사용한다.
+#
+func _integrate_forces( physics_state ):
+	var xform = physics_state.transform
+	xform.origin.x = wrapf( xform.origin.x, 0, screensize.x ) # wrapf == clamp
+	xform.origin.y = wrapf( xform.origin.y, 0, screensize.y )
+	physics_state.transform = xform
+
+
+
 
 #
 #
