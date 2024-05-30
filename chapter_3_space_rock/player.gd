@@ -101,3 +101,7 @@ func shoot():
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child( b )
 	b.start( $Muzzle.global_transform )
+
+
+func _on_gun_cooldown_timeout():
+	can_shoot = true
