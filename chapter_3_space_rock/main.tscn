@@ -20,3 +20,6 @@ texture = ExtResource("1_rx7gl")
 
 [node name="RockPath" type="Path2D" parent="."]
 curve = SubResource("Curve2D_6c1rx")
+
+[node name="RockSpawn" type="PathFollow2D" parent="RockPath"]
+position = Vector2(-16, -16)
