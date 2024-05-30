@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dil6t2tsgm1ns"]
+[gd_scene load_steps=3 format=3 uid="uid://dil6t2tsgm1ns"]
 
 [ext_resource type="Texture2D" uid="uid://c1sukia6s6faq" path="res://assets/space_background.png" id="1_rx7gl"]
+[ext_resource type="PackedScene" uid="uid://ddo070nxq0bsa" path="res://player.tscn" id="2_a7gxo"]
 
 [node name="main" type="Node2D"]
 
@@ -8,3 +9,5 @@
 position = Vector2(572, 325)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_rx7gl")
+
+[node name="Player" parent="." instance=ExtResource("2_a7gxo")]
