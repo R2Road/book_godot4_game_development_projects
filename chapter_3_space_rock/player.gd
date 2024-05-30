@@ -6,6 +6,7 @@ extends RigidBody2D
 @export var engine_power = 500
 @export var spin_power = 800
 
+@export var bullet_scene : PackedScene
 #
 #
 #

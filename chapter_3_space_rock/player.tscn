@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddo070nxq0bsa"]
+[gd_scene load_steps=5 format=3 uid="uid://ddo070nxq0bsa"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ia0ve"]
 [ext_resource type="Texture2D" uid="uid://byjlamtq07vga" path="res://assets/player_ship.png" id="1_nbiml"]
+[ext_resource type="PackedScene" uid="uid://dqb32pd0pf6i0" path="res://bullet.tscn" id="2_5uv2j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eyb5e"]
 radius = 23.0217
@@ -9,6 +10,7 @@ radius = 23.0217
 [node name="RigidBody2D" type="RigidBody2D"]
 linear_damp = 1.0
 script = ExtResource("1_ia0ve")
+bullet_scene = ExtResource("2_5uv2j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
