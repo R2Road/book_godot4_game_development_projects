@@ -7,6 +7,10 @@ extends RigidBody2D
 @export var spin_power = 800
 
 @export var bullet_scene : PackedScene
+@export var fire_rate = 0.25
+
+
+
 #
 #
 #
@@ -24,6 +28,11 @@ var rotation_dir = 0
 enum { INIT, ALIVE, INVULNERABLE, DEAD }
 var state = INIT
 
+#
+#
+#
+var can_shoot = true
+
 
 
 
@@ -34,6 +43,8 @@ func _ready():
 	screensize = get_viewport_rect().size
 	
 	change_state( ALIVE )
+	
+	$GunCooldown.wait_time = fire_rate
 
 func _process( delta ):
 	get_input()
@@ -77,3 +88,16 @@ func get_input():
 		thrust = transform.x * engine_power
 	
 	rotation_dir = Input.get_axis( "rotate_left", "rotate_right" )
+	
+	if Input.is_action_pressed( "shoot" ) and can_shoot:
+		shoot()
+
+func shoot():
+	if state == INVULNERABLE:
+		return
+		
+	can_shoot = false
+	$GunCooldown.start()
+	var b = bullet_scene.instantiate()
+	get_tree().root.add_child( b )
+	b.start( $Muzzle.global_transform )
