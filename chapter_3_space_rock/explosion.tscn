@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfr3cvxnnti1q"]
+[gd_scene load_steps=4 format=3 uid="uid://bfr3cvxnnti1q"]
 
 [ext_resource type="Texture2D" uid="uid://bfi6pjo5kr7cm" path="res://assets/explosion.png" id="1_hlppc"]
+
+[sub_resource type="Animation" id="Animation_xsodj"]
+resource_name = "explosion"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hjjjp"]
+_data = {
+"explosion": SubResource("Animation_xsodj")
+}
 
 [node name="Explosion" type="Sprite2D"]
 texture = ExtResource("1_hlppc")
@@ -8,3 +16,6 @@ hframes = 8
 vframes = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hjjjp")
+}
