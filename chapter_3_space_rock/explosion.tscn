@@ -4,3 +4,5 @@
 
 [node name="Explosion" type="Sprite2D"]
 texture = ExtResource("1_hlppc")
+hframes = 8
+vframes = 8
