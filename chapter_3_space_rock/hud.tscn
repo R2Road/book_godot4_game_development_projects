@@ -1,4 +1,10 @@
-[gd_scene format=3 uid="uid://c2ibgweqkw4vg"]
+[gd_scene load_steps=3 format=3 uid="uid://c2ibgweqkw4vg"]
+
+[ext_resource type="FontFile" uid="uid://cg8kr11cqrt5s" path="res://assets/kenvector_future_thin.ttf" id="1_jttfi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uj435"]
+font = ExtResource("1_jttfi")
+font_size = 64
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -17,3 +23,9 @@ theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = SubResource("LabelSettings_uj435")
