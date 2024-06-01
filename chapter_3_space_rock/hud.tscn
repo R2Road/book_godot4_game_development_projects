@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2ibgweqkw4vg"]
+[gd_scene load_steps=4 format=3 uid="uid://c2ibgweqkw4vg"]
 
 [ext_resource type="FontFile" uid="uid://cg8kr11cqrt5s" path="res://assets/kenvector_future_thin.ttf" id="1_jttfi"]
+[ext_resource type="Texture2D" uid="uid://de8w1i6h36eun" path="res://assets/player_small.png" id="2_lguu8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uj435"]
 font = ExtResource("1_jttfi")
@@ -34,3 +35,8 @@ label_settings = SubResource("LabelSettings_uj435")
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_constants/separation = 20
+
+[node name="L1" type="TextureRect" parent="MarginContainer/HBoxContainer/LivesCounter"]
+layout_mode = 2
+texture = ExtResource("2_lguu8")
+stretch_mode = 5
