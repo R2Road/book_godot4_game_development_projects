@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://c2ibgweqkw4vg"]
 
 [node name="HUD" type="CanvasLayer"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
