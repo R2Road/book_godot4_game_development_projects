@@ -40,3 +40,13 @@ theme_override_constants/separation = 20
 layout_mode = 2
 texture = ExtResource("2_lguu8")
 stretch_mode = 5
+
+[node name="L2" type="TextureRect" parent="MarginContainer/HBoxContainer/LivesCounter"]
+layout_mode = 2
+texture = ExtResource("2_lguu8")
+stretch_mode = 5
+
+[node name="L3" type="TextureRect" parent="MarginContainer/HBoxContainer/LivesCounter"]
+layout_mode = 2
+texture = ExtResource("2_lguu8")
+stretch_mode = 5
