@@ -41,3 +41,33 @@ func spawn_rock( size, pos = null, vel = null ):
 	r.screensize = screensize
 	r.start( pos, vel, size )
 	call_deferred( "add_child", r )
+	
+	# Connect Signal
+	r.exploded.connect( self._on_rock_exploded )
+
+
+
+#
+#
+#
+func _on_rock_exploded( size, radius, pos, vel ):
+	if size <= 1:
+		return
+	
+	for offset in [-1, 1]:
+		#
+		# 폭발하는 바위와 플레이어를 기준으로 수평 이동한 위치에 새 바위를 생성
+		#
+		# + Vector2 direction_to(to: Vector2) const
+		#   > Returns the normalized vector pointing from this vector to to.
+		#   > This is equivalent to using (b - a).normalized().
+		#
+		# + Vector2 orthogonal() const
+		#   > Returns a perpendicular vector rotated 90 degrees counter-clockwise
+		#   > compared to the original, with the same length.
+		#
+		var dir = $Player.position.direction_to( pos ).orthogonal() * offset
+		var newpos = pos + ( dir * radius )
+		
+		var newvel = dir * vel.length() * 1.1
+		spawn_rock( size - 1, newpos, newvel )
