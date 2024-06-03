@@ -13,10 +13,7 @@ max_contacts_reported = 1
 contact_monitor = true
 linear_damp = 1.0
 script = ExtResource("1_ia0ve")
-engine_power = null
-spin_power = null
 bullet_scene = ExtResource("2_5uv2j")
-fire_rate = null
 
 [node name="Explosion" parent="." instance=ExtResource("3_lhlyx")]
 visible = false
