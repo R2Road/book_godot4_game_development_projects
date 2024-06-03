@@ -142,6 +142,12 @@ func reset():
 	lives = 3
 	change_state( ALIVE )
 
+func explode():
+	$Explosion.show()
+	$Explosion/AnimationPlayer.play( "explosion" )
+	await $Explosion/AnimationPlayer.animation_finished
+	$Explosion.hide()
+
 
 
 #
