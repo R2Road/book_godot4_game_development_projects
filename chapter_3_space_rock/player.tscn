@@ -13,7 +13,10 @@ max_contacts_reported = 1
 contact_monitor = true
 linear_damp = 1.0
 script = ExtResource("1_ia0ve")
+engine_power = null
+spin_power = null
 bullet_scene = ExtResource("2_5uv2j")
+fire_rate = null
 
 [node name="Explosion" parent="." instance=ExtResource("3_lhlyx")]
 visible = false
@@ -37,5 +40,6 @@ autostart = true
 wait_time = 2.0
 one_shot = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
 [connection signal="timeout" from="InvulnerabilityTimer" to="." method="_on_invulnerability_timer_timeout"]

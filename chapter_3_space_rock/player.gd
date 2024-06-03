@@ -153,3 +153,10 @@ func _on_gun_cooldown_timeout():
 
 func _on_invulnerability_timer_timeout():
 	change_state( ALIVE )
+
+
+func _on_body_entered(body):
+	if body.is_in_group( "rocks" ):
+		body.explode()
+		lives -= 1
+		explode()
