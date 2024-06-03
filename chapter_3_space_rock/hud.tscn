@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c2ibgweqkw4vg"]
+[gd_scene load_steps=8 format=3 uid="uid://c2ibgweqkw4vg"]
 
 [ext_resource type="FontFile" uid="uid://cg8kr11cqrt5s" path="res://assets/kenvector_future_thin.ttf" id="1_jttfi"]
+[ext_resource type="Script" path="res://hud.gd" id="1_rtwpn"]
 [ext_resource type="Texture2D" uid="uid://de8w1i6h36eun" path="res://assets/player_small.png" id="2_lguu8"]
 [ext_resource type="Texture2D" uid="uid://0usqikigov8o" path="res://assets/play_button.png" id="3_3bfsb"]
 [ext_resource type="Texture2D" uid="uid://de1g5xta7ti3h" path="res://assets/play_button_h.png" id="4_tbvbo"]
@@ -14,6 +15,7 @@ font = ExtResource("1_jttfi")
 font_size = 64
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_rtwpn")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
