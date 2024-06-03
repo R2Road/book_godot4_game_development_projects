@@ -149,3 +149,7 @@ func reset():
 #
 func _on_gun_cooldown_timeout():
 	can_shoot = true
+
+
+func _on_invulnerability_timer_timeout():
+	change_state( ALIVE )
