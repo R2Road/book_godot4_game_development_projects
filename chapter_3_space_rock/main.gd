@@ -73,6 +73,10 @@ func spawn_rock( size, pos = null, vel = null ):
 	# Connect Signal
 	r.exploded.connect( self._on_rock_exploded )
 
+func game_over():
+	playing = false
+	$HUD.game_over()
+
 
 
 #
