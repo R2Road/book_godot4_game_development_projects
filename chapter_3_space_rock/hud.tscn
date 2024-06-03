@@ -79,3 +79,5 @@ layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_3bfsb")
 texture_hover = ExtResource("4_tbvbo")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
