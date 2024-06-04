@@ -32,6 +32,9 @@ curve = SubResource("Curve2D_6c1rx")
 [node name="RockSpawn" type="PathFollow2D" parent="RockPath"]
 position = Vector2(-16, -16)
 
+[node name="EnemyTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="dead" from="Player" to="." method="game_over"]
 [connection signal="lives_changed" from="Player" to="HUD" method="update_lives"]
