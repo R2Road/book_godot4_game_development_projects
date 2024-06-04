@@ -6,6 +6,7 @@ extends Node2D
 # export
 #
 @export var rock_scene : PackedScene
+@export var enemy_scene : PackedScene
 
 
 
@@ -71,6 +72,8 @@ func new_level():
 	$HUD.show_message( "Wave %s" % level )
 	for i in level:
 		spawn_rock( 3 )
+		
+	$EnemyTimer.start( randf_range( 5, 10 ) )
 
 func spawn_rock( size, pos = null, vel = null ):
 	if pos == null:
