@@ -46,7 +46,7 @@ _data = {
 "flash": SubResource("Animation_b5y41")
 }
 
-[node name="Enemy" type="Area2D"]
+[node name="Enemy" type="Area2D" groups=["enemies"]]
 script = ExtResource("1_i5q7p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
