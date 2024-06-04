@@ -38,3 +38,11 @@ func _physics_process( delta ):
 	position = follow.global_position
 	if follow.progress_ratio >= 1:
 		queue_free()
+
+
+
+#
+#
+#
+func _on_gun_cooldown_timeout():
+	pass # Replace with function body.
