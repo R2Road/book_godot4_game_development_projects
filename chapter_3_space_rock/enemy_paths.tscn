@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://1h3pgmomr4qt"]
+[gd_scene load_steps=4 format=3 uid="uid://1h3pgmomr4qt"]
 
 [sub_resource type="Curve2D" id="Curve2D_st5jo"]
 _data = {
@@ -6,7 +6,26 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="Curve2D" id="Curve2D_ka548"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1192, 112, 0, 0, 0, 0, 704, 24, 0, 0, 0, 0, 248, 56, 0, 0, 0, 0, 16, 248, 0, 0, 0, 0, 80, 568, 0, 0, 0, 0, 648, 624, 0, 0, 0, 0, 1232, 576)
+}
+point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_6slbq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1016, -88, 0, 0, 0, 0, 904, 200, 0, 0, 0, 0, 712, 296, 0, 0, 0, 0, 472, 264, 0, 0, 0, 0, 288, 344, 0, 0, 0, 0, 160, 504, 0, 0, 0, 0, 80, 752)
+}
+point_count = 7
+
 [node name="EnemyPaths" type="Node2D"]
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Path2D_1" type="Path2D" parent="."]
 curve = SubResource("Curve2D_st5jo")
+
+[node name="Path2D_2" type="Path2D" parent="."]
+position = Vector2(0, 3)
+curve = SubResource("Curve2D_ka548")
+
+[node name="Path2D_3" type="Path2D" parent="."]
+curve = SubResource("Curve2D_6slbq")
