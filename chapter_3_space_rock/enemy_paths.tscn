@@ -18,7 +18,7 @@ _data = {
 }
 point_count = 7
 
-[node name="EnemyPaths" type="Node2D"]
+[node name="EnemyPaths" type="Node"]
 
 [node name="Path2D_1" type="Path2D" parent="."]
 curve = SubResource("Curve2D_st5jo")
