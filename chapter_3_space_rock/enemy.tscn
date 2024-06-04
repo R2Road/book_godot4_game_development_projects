@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhf2rfvey7tbr"]
+[gd_scene load_steps=8 format=3 uid="uid://bhf2rfvey7tbr"]
 
 [ext_resource type="Texture2D" uid="uid://beebfko0lf32" path="res://assets/enemy_saucer.png" id="1_8eksn"]
 [ext_resource type="PackedScene" uid="uid://1h3pgmomr4qt" path="res://enemy_paths.tscn" id="2_elw43"]
+[ext_resource type="PackedScene" uid="uid://bfr3cvxnnti1q" path="res://explosion.tscn" id="3_td2r4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yggp0"]
 radius = 32.88
@@ -59,3 +60,6 @@ shape = SubResource("CircleShape2D_yggp0")
 libraries = {
 "": SubResource("AnimationLibrary_qh13t")
 }
+
+[node name="Explosion" parent="." instance=ExtResource("3_td2r4")]
+visible = false
