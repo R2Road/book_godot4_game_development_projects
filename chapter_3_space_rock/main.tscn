@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dil6t2tsgm1ns"]
+[gd_scene load_steps=8 format=3 uid="uid://dil6t2tsgm1ns"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_7smka"]
 [ext_resource type="Texture2D" uid="uid://c1sukia6s6faq" path="res://assets/space_background.png" id="1_rx7gl"]
 [ext_resource type="PackedScene" uid="uid://ddo070nxq0bsa" path="res://player.tscn" id="2_a7gxo"]
 [ext_resource type="PackedScene" uid="uid://dwwkxiwky5bt6" path="res://rock.tscn" id="2_wqwcd"]
+[ext_resource type="PackedScene" uid="uid://bhf2rfvey7tbr" path="res://enemy.tscn" id="3_lwrqx"]
 [ext_resource type="PackedScene" uid="uid://c2ibgweqkw4vg" path="res://hud.tscn" id="3_mm8c7"]
 
 [sub_resource type="Curve2D" id="Curve2D_6c1rx"]
@@ -16,6 +17,7 @@ point_count = 5
 process_mode = 3
 script = ExtResource("1_7smka")
 rock_scene = ExtResource("2_wqwcd")
+enemy_scene = ExtResource("3_lwrqx")
 
 [node name="HUD" parent="." instance=ExtResource("3_mm8c7")]
 
