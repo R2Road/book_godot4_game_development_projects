@@ -123,3 +123,10 @@ func _on_rock_exploded( size, radius, pos, vel ):
 		
 		var newvel = dir * vel.length() * 1.1
 		spawn_rock( size - 1, newpos, newvel )
+
+
+func _on_enemy_timer_timeout():
+	var e = enemy_scene.instantiate()
+	add_child( e )
+	e.target = $Player
+	$EnemyTimer.start( randf_range( 20, 40 ) )
