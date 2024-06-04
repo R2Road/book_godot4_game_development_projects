@@ -1,6 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://1h3pgmomr4qt"]
 
 [sub_resource type="Curve2D" id="Curve2D_st5jo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -88, 128, 0, 0, 0, 0, 384, 312, 0, 0, 0, 0, 664, 600, 0, 0, 0, 0, 1112, 520, 0, 0, 0, 0, 1048, 32, 0, 0, 0, 0, 808, -80)
+}
+point_count = 6
 
 [node name="EnemyPaths" type="Node2D"]
 
