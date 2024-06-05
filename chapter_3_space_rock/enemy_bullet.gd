@@ -23,3 +23,11 @@ func _process( delta ):
 func start( _pos, _dir ):
 	position = _pos
 	rotation = _dir.angle()
+
+
+
+#
+#
+#
+func _on_body_entered(body):
+	queue_free()
