@@ -6,6 +6,8 @@ extends Area2D
 #
 #
 @export var bullet_scene : PackedScene
+@export var bullet_spread = 0.2
+
 @export var speed = 150
 @export var rotation_speed = 120
 @export var health = 3
@@ -44,5 +46,18 @@ func _physics_process( delta ):
 #
 #
 #
+func shoot():
+	var dir = global_position.direction_to( target.global_position )
+	dir = dir.rotated( randf_range( -bullet_spread, bullet_spread ) )
+	
+	var b = bullet_scene.instantiate()
+	get_tree().root.add_child( b )
+	b.start( global_position, dir )
+
+
+
+#
+#
+#
 func _on_gun_cooldown_timeout():
-	pass # Replace with function body.
+	shoot()
