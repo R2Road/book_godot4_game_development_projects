@@ -61,6 +61,23 @@ func shoot_pulse( n, delay ):
 		await get_tree().create_timer( delay ).timeout
 
 
+func take_damage( amount ):
+	health -= amount
+	$AnimationPlayer.play( "flash" )
+	if health <= 0:
+		explode()
+
+
+func explode():
+	speed = 0;
+	$GunCooldown.stop()
+	$CollisionShape2D.set_deferred( "disabled", true )
+	$Sprite2D.hide()
+	$Explosion.show()
+	$Explosion/AnimationPlayer.play( "explosion" )
+	await $Explosion/AnimationPlayer.animation_finished
+	queue_free()
+
 
 #
 #
