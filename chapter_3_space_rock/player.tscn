@@ -45,6 +45,7 @@ amount = 25
 local_coords = true
 emission_shape = 3
 emission_rect_extents = Vector2(1, 5)
+spread = 0.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
