@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cjx7v2ca1o54l"]
 
-[ext_resource type="Texture2D" uid="uid://b07avsqptu20f" path="res://assets/laser.png" id="2_h54ak"]
+[ext_resource type="Texture2D" uid="uid://c10g0uqemcnyn" path="res://assets/laser_green.png" id="1_54wne"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gbaxf"]
 radius = 2.0
@@ -10,7 +10,7 @@ height = 26.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_h54ak")
+texture = ExtResource("1_54wne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
