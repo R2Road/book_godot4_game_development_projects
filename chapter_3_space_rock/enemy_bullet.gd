@@ -10,7 +10,7 @@ extends Area2D
 
 
 #
-# override
+################################ override ################################
 #
 func _process( delta ):
 	position += transform.x * speed * delta
@@ -18,7 +18,7 @@ func _process( delta ):
 
 
 #
-#
+################################   user   ################################
 #
 func start( _pos, _dir ):
 	position = _pos
@@ -27,7 +27,7 @@ func start( _pos, _dir ):
 
 
 #
-#
+################################  signal  ################################
 #
 func _on_body_entered(body):
 	queue_free()
