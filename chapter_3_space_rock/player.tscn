@@ -38,6 +38,11 @@ wait_time = 2.0
 one_shot = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+show_behind_parent = true
+position = Vector2(-28, 0)
+rotation = 3.14159
+amount = 25
+local_coords = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
