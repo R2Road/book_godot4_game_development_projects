@@ -55,9 +55,15 @@ func shoot():
 	b.start( global_position, dir )
 
 
+func shoot_pulse( n, delay ):
+	for i in n:
+		shoot()
+		await get_tree().create_timer( delay ).timeout
+
+
 
 #
 #
 #
 func _on_gun_cooldown_timeout():
-	shoot()
+	shoot_pulse( 3, 0.15 )
