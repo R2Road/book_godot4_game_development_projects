@@ -84,3 +84,9 @@ func explode():
 #
 func _on_gun_cooldown_timeout():
 	shoot_pulse( 3, 0.15 )
+
+
+func _on_body_entered( body ):
+	if body.is_in_group( "rocks" ):
+		return
+	explode()
