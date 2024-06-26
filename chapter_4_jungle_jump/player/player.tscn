@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpxeteo86315s"]
+[gd_scene load_steps=10 format=3 uid="uid://dpxeteo86315s"]
 
 [ext_resource type="Texture2D" uid="uid://lqals8v555pu" path="res://assets/player_sheet.png" id="1_d1qli"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_rdqwl"]
 
 [sub_resource type="Animation" id="Animation_t0nod"]
 resource_name = "hurt"
@@ -100,6 +101,7 @@ size = Vector2(10, 20)
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 13
+script = ExtResource("1_rdqwl")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
