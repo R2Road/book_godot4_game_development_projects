@@ -1,5 +1,13 @@
-[gd_scene format=3 uid="uid://dpxeteo86315s"]
+[gd_scene load_steps=2 format=3 uid="uid://dpxeteo86315s"]
+
+[ext_resource type="Texture2D" uid="uid://lqals8v555pu" path="res://assets/player_sheet.png" id="1_d1qli"]
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 13
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_d1qli")
+hframes = 19
+frame = 7
