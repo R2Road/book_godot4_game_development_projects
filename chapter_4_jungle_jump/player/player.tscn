@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpxeteo86315s"]
+[gd_scene load_steps=9 format=3 uid="uid://dpxeteo86315s"]
 
 [ext_resource type="Texture2D" uid="uid://lqals8v555pu" path="res://assets/player_sheet.png" id="1_d1qli"]
 
@@ -94,6 +94,9 @@ _data = {
 "run": SubResource("Animation_hqtd2")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lixqn"]
+size = Vector2(10, 20)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 13
@@ -102,9 +105,13 @@ collision_mask = 13
 position = Vector2(0, -16)
 texture = ExtResource("1_d1qli")
 hframes = 19
-frame = 12
+frame = 7
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_t4sou")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_lixqn")
