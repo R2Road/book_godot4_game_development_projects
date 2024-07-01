@@ -73,7 +73,7 @@ func change_state( new_state : eState ):
 			$AnimationPlayer.play( "run" )
 		eState.HURT:
 			$AnimationPlayer.play( "hurt" )
-		eState.RUN:
+		eState.JUMP:
 			$AnimationPlayer.play( "jump_up" )
 		eState.HURT:
 			$Animationplayer.play( "hurt" )
