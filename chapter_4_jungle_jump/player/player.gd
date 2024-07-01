@@ -1,6 +1,11 @@
 extends CharacterBody2D
 
 
+######################### Signal Variable ########################
+signal life_changed
+signal died
+
+
 
 ############################  Export  ############################
 @export var gravity = 750
@@ -18,6 +23,13 @@ enum eState {
 	DEAD,
 }
 var state = eState.IDLE
+
+var life = 3 : set = set_life
+func set_life( value ):
+	life = value
+	life_changed.emit( life )
+	if life <= 0:
+		change_state( eState.DEAD )
 
 
 
@@ -49,6 +61,7 @@ func reset( _position ):
 	self.position = _position
 	show()
 	change_state( eState.IDLE )
+	life = 3
 
 
 func change_state( new_state : eState ):
@@ -62,11 +75,22 @@ func change_state( new_state : eState ):
 			$AnimationPlayer.play( "hurt" )
 		eState.RUN:
 			$AnimationPlayer.play( "jump_up" )
+		eState.HURT:
+			$Animationplayer.play( "hurt" )
+			velocity.y = -200
+			velocity.x = -100 * sign( velocity.x )
+			life -= 1
+			await get_tree().create_timer( 0.5 ).timeout
+			change_state( eState.IDLE )
 		eState.DEAD:
+			died.emit()
 			hide()
 
 
 func get_input():
+	if state == eState.HURT:
+		return
+	
 	var right = Input.is_action_pressed( "right" )
 	var left = Input.is_action_pressed( "left" )
 	var jump = Input.is_action_just_pressed( "jump" ) # Push
@@ -96,3 +120,8 @@ func get_input():
 	# 공중에 있으면 JUMP로 변환
 	if state in [eState.IDLE, eState.RUN] and !is_on_floor():
 		change_state( eState.JUMP )
+
+
+func hurt():
+	if state != eState.HURT:
+		change_state( eState.HURT )
